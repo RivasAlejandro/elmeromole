@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Mero Mole — Comunidad de Comediantes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- NAV STICKY -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <img class="brand-logo" src="assets/logo.jpeg" alt="Logo El Mero Mole" />
+        <span class="brand-name">El Mero Mole</span>
+      </a>
+
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#quienes">Quiénes somos</a></li>
+
+        <li class="dropdown" role="none">
+          <a role="menuitem" href="#comediantes" aria-haspopup="true" aria-expanded="false">
+            Comediantes ▾
+          </a>
+          <ul class="dropdown-menu" aria-label="Lista de comediantes">
+            <!-- se llena con JS -->
+          </ul>
+        </li>
+
+        <li role="none"><a role="menuitem" href="#galeria">Galería</a></li>
+        <li role="none"><a role="menuitem" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>El Mero Mole</h1>
+          <p class="subtitle">Comunidad de comediantes. Shows, eventos y puro cotorreo del bueno.</p>
+
+          <div class="cta-row">
+            <a class="btn" href="#comediantes">Ver comediantes</a>
+            <a class="btn btn-outline" href="#galeria">Ver eventos</a>
+          </div>
+
+          <div class="hero-badges">
+            <span class="pill">Open mic</span>
+            <span class="pill">Shows</span>
+            <span class="pill">Comunidad</span>
+          </div>
+        </div>
+
+        <div class="hero-poster" aria-hidden="true">
+          <div class="poster-glow"></div>
+          <div class="poster-card">
+            <div class="poster-title">Noche de Stand-up</div>
+            <div class="poster-sub">Open mic • Shows • Comunidad</div>
+            <img class="poster-logo" src="assets/logo.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes" class="section">
+      <div class="container">
+        <h2>Quiénes somos</h2>
+        <p class="subtitle">
+          El Mero Mole es una comunidad dedicada a impulsar comediantes y crear shows inolvidables.
+          Aquí se cocina la comedia con disciplina, respeto y mucha risa.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Misión</h3>
+            <p>Impulsar talento y producir eventos con comedia de calidad.</p>
+          </div>
+          <div class="info-card">
+            <h3>Visión</h3>
+            <p>Ser la comunidad referente de stand-up en la región.</p>
+          </div>
+          <div class="info-card">
+            <h3>Valores</h3>
+            <p>Respeto, constancia, escenario y comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMEDIANTES -->
+    <section id="comediantes" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Comediantes</h2>
+          <p class="subtitle">Ordenados de mayor tiempo de rutina a menor. (La descripción aparece al pasar el mouse)</p>
+        </div>
+
+        <div class="filters">
+          <label class="search">
+            <span class="sr-only">Buscar comediante</span>
+            <input id="comedianteSearch" type="search" placeholder="Buscar por nombre..." />
+          </label>
+        </div>
+
+        <div id="comedianteGrid" class="comediante-grid" aria-live="polite">
+          <!-- se llena con JS -->
+        </div>
+
+     
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Galería</h2>
+          <p class="subtitle">Fotos de eventos, shows y micrófonos abiertos.</p>
+        </div>
+
+        <div class="gallery">
+          <a class="gallery-item" href="assets/evento1.png"><img src="assets/evento1.png" alt="Evento 1" loading="lazy"></a>
+          <a class="gallery-item" href="assets/evento2.png"><img src="assets/evento2.png" alt="Evento 2" loading="lazy"></a>
+          <a class="gallery-item" href="assets/evento3.png"><img src="assets/evento3.png" alt="Evento 3" loading="lazy"></a>
+          <a class="gallery-item" href="assets/evento4.png"><img src="assets/evento4.png" alt="Evento 4" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section alt">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="subtitle">Para fechas, shows o unirte a la comunidad:</p>
+
+        <div class="contact-row">
+          <a class="btn" href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-outline" href="mailto:contacto@elmeromole.com">Email</a>
+          <a class="btn btn-outline" href="https://instagram.com/tuinsta" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <small>© <span id="year"></span> El Mero Mole. Todos los derechos reservados.</small>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
